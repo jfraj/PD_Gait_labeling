@@ -24,7 +24,7 @@ config = SimpleNamespace()
 
 config.learning_rate = 0.0001
 config.BATCH_SIZE = 256
-config.N_epochs = 100
+config.N_epochs = 2
 config.NoEval=True
 # weights for the different losses
 config.weight_rep = 1
@@ -509,3 +509,4 @@ else:
             loss_3d_tot+=loss_3d*sample['poses_3d'].shape[0]
             N+=sample['poses_3d'].shape[0]
         print('Error 3D',loss_3d_tot/N*1000)
+print('Finished running')
